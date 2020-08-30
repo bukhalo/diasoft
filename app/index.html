@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/button.css" />
     <link rel="stylesheet" href="./styles/form.css" />
     <link rel="stylesheet" href="./styles/input.css" />
+    <link rel="stylesheet" href="./styles/label.css" />
     <link rel="stylesheet" href="./styles/auth-page.css" />
   </head>
   <body>
@@ -18,12 +19,13 @@
         <form id="signup" class="form form--state-save form--state-load">
           <div class="form__title">Sign up for your account</div>
           <div class="form__group">
-            <label>
+            <label class="label" for="countries-input">
+              <span class="label__text">Where do you want to go? *</span>
               <input
                 name="country"
                 type="text"
                 id="countries-input"
-                placeholder="Country"
+                placeholder="Belarus"
                 class="input"
                 list="countries-datalist"
                 required
@@ -32,12 +34,14 @@
             <datalist id="countries-datalist"></datalist>
           </div>
           <div class="form__group">
-            <label>
+            <label class="label" for="phoneNumber">
+              <span class="label__text">Phone number (RU)*</span>
               <input
                 name="phoneNumber"
+                id="phoneNumber"
                 type="text"
-                placeholder="Phone number"
-                class="input"
+                placeholder="(925) 305-6504"
+                class="input input--mask-phone-number"
                 required
               />
             </label>
@@ -54,7 +58,8 @@
         </form>
       </div>
     </div>
-    <script type="module" src="scripts/form.js"></script>
+    <script type="module" src="./scripts/form.js"></script>
+    <script type="module" src="./scripts/input.js"></script>
     <script type="module" src="./scripts/datalist-fetch-data.js"></script>
     <script type="module" src="./scripts/main.js"></script>
   </body>

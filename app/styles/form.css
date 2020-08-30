@@ -10,24 +10,24 @@
   color: rgb(94, 108, 132);
 }
 
-.form > .form__title {
+.form .form__title {
   margin-bottom: 3rem;
   color: rgb(45, 47, 51);
   font-size: 2rem;
   font-weight: bold;
 }
 
-.form > .form__group {
+.form .form__group {
   margin-bottom: 2rem;
 }
 
-.form > .form__footer {
+.form .form__footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.form > .form__info {
+.form .form__info {
   display: flex;
   align-items: center;
   justify-content: flex-start;
