@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/bukhalo/diasoft#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.12",
     "prettier": "^2.1.1"
   }
 }
