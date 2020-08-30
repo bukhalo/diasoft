@@ -1,0 +1,23 @@
+.input {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem 0.7rem;
+  background-color: rgb(250, 251, 252);
+  border-color: rgb(223, 225, 230);
+  border-radius: 0.3rem;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-sizing: border-box;
+  color: rgb(9, 30, 66);
+  cursor: text;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out 0s,
+  border-color 0.2s ease-in-out 0s;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  pointer-events: auto;
+}

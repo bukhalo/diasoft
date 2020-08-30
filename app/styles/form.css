@@ -1,0 +1,28 @@
+.form {
+  min-width: 28rem;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 1rem;
+  color: rgb(94, 108, 132);
+}
+
+.form > .form__title {
+  margin-bottom: 3rem;
+  color: rgb(45, 47, 51);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form > .form__group {
+  margin-bottom: 2rem;
+}
+
+.form > .form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

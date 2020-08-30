@@ -1,0 +1,9 @@
+:root {
+  --font-size-base: 1.6rem;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --page-background: #c1ceda;
+  --blue: rgb(0, 82, 204);
+  --blue-hover: rgb(20, 114, 255);
+}

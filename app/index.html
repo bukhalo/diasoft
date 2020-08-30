@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diasoft test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/button.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/input.css" />
+    <link rel="stylesheet" href="./styles/auth-page.css" />
+  </head>
+  <body>
+    <div class="auth-page">
+      <div class="auth-page__container">
+        <div class="form">
+          <div class="form__title">Sign up for your account</div>
+          <div class="form__group">
+            <label>
+              <input
+                type="text"
+                placeholder="Country"
+                class="input"
+                list="countries-datalist"
+              />
+            </label>
+            <datalist id="countries-datalist"></datalist>
+          </div>
+          <div class="form__group">
+            <label>
+              <input
+                type="text"
+                placeholder="Phone number"
+                class="input"
+                required
+              />
+            </label>
+          </div>
+          <div class="form__footer">
+            <button class="button button--primary">
+              <span class="button__content">Sign up</span>
+            </button>
+            <button class="button button--light">
+              <span class="button__content">Clear</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
