@@ -15,11 +15,12 @@
   <body>
     <div class="auth-page">
       <div class="auth-page__container">
-        <div class="form">
+        <form id="signup" class="form">
           <div class="form__title">Sign up for your account</div>
           <div class="form__group">
             <label>
               <input
+                name="country"
                 type="text"
                 placeholder="Country"
                 class="input"
@@ -31,6 +32,7 @@
           <div class="form__group">
             <label>
               <input
+                name="phoneNumber"
                 type="text"
                 placeholder="Phone number"
                 class="input"
@@ -42,12 +44,13 @@
             <button class="button button--primary">
               <span class="button__content">Sign up</span>
             </button>
-            <button class="button button--light">
+            <button class="form__action-clear button button--light">
               <span class="button__content">Clear</span>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
