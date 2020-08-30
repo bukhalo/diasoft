@@ -26,3 +26,13 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+.form > .form__info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  min-height: 2rem;
+}
+
