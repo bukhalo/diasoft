@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/bukhalo/diasoft/issues"
   },
-  "homepage": "https://github.com/bukhalo/diasoft#readme"
+  "homepage": "https://github.com/bukhalo/diasoft#readme",
+  "devDependencies": {
+    "prettier": "^2.1.1"
+  }
 }
