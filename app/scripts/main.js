@@ -1,3 +1,5 @@
+import { datalistFetchData } from './datalist-fetch-data.js';
+
 const initForms = () => {
   // All forms on page
   const forms = document.querySelectorAll('form');
@@ -46,4 +48,12 @@ const initForms = () => {
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initForms();
+
+  /**
+   * Connect datalist autocomplete for countries selector
+   */
+  const countriesDataList = document.querySelector('#countries-datalist');
+  const countriesInput = document.querySelector('#countries-input');
+  const endpoints = ['./data/countries-part1.json'];
+  datalistFetchData(countriesInput, countriesDataList, endpoints, 0);
 });
