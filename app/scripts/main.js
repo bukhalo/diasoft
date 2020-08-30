@@ -6,61 +6,26 @@ const formDataSend = new Promise((resolve, reject) => {
   // setTimeout(reject, 1000, { status: 400, message: 'error' } )
 });
 
-const initForms = () => {
-  // All forms on page
-  const forms = document.querySelectorAll('form');
+const initSignUpForm = () => {
+  const form = document.querySelector('#signup');
+  const formInfo = form.querySelector('.form__info');
 
-  forms.forEach((form) => {
-    const formInputs = form.querySelectorAll('input');
-    const formInfo = form.querySelector('.form__info');
-
-    // Submit form handling
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const form = event.target;
-
-      const formInputs = form.querySelectorAll('input');
-      formInputs.forEach((input) => {
-        localStorage.setItem(
-          `form-${form.id}-input-${input.name}-value`,
-          input.value,
-        );
-      });
-
-      try {
-        const req = await formDataSend;
-        if (req.status === 200) {
-          formInfo.innerHTML = 'Form data sent successfully 👍';
-          console.info('Form data sent successfully 👍')
-          return;
-        }
-        throw(req);
-      } catch(e) {
-        formInfo.innerHTML = 'Error while send form data 😭';
-        console.error('Error while send form data 😭');
-        console.error(e);
+  // Submit form handling
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    try {
+      const req = await formDataSend;
+      if (req.status === 200) {
+        formInfo.innerHTML = 'Form data sent successfully 👍';
+        console.info('Form data sent successfully 👍');
+        return;
       }
-    });
-
-    // Clear form handling
-    const formClearButton = form.querySelector('.form__action-clear');
-    formClearButton.addEventListener('click', () => {
-      form.reset();
-      formInputs.forEach((input) => {
-        localStorage.removeItem(`form-${form.id}-input-${input.name}-value`);
-      });
-    });
-
-    // Read form state from localstorage
-    formInputs.forEach((input) => {
-      const inputState = localStorage.getItem(
-        `form-${form.id}-input-${input.name}-value`,
-      );
-      if (inputState) {
-        input.value = inputState;
-      }
-    });
+      throw req;
+    } catch (e) {
+      formInfo.innerHTML = 'Error while send form data 😭';
+      console.error('Error while send form data 😭');
+      console.error(e);
+    }
   });
 };
 
@@ -68,7 +33,7 @@ const initForms = () => {
  * Make some work on 'DOMContentLoaded' event
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initForms();
+  initSignUpForm();
 
   /**
    * Connect datalist autocomplete for countries selector
