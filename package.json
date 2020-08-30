@@ -1,0 +1,18 @@
+{
+  "name": "diasoft-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bukhalo/diasoft.git"
+  },
+  "author": "Aleksandr Bukhalo <a@bukhalo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bukhalo/diasoft/issues"
+  },
+  "homepage": "https://github.com/bukhalo/diasoft#readme"
+}
