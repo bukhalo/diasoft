@@ -13,7 +13,7 @@ export const datalistFetchData = (
   minCharacters,
 ) => {
   const client = new XMLHttpRequest();
-  input.addEventListener('keyup', (event) => {
+  input.addEventListener('input', (event) => {
     const input = event.target;
     if (input.value.length < minCharacters) return;
 
